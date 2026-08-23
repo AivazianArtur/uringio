@@ -133,5 +133,8 @@ jobs:
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/*
-          generate_release_notes: true
+          files: |
+            dist/*.whl
+            dist/*.tar.gz
+          body: |
+            See full release notes in [CHANGELOG.md](https://github.com/AivazianArtur/uringio/blob/main/CHANGELOG.md).

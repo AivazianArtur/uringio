@@ -1,3 +1,12 @@
+## v0.4.4
+### Added
+- PyPI link in documentation
+### Fixed
+- Fixed relative paths in `docs/IO_URING.md` for illustrations
+- Fixed gawk dependency error of `make build` for new systems
+- Fixed name path of `UringioLoop`
+- Fixed [CI error](https://github.com/AivazianArtur/uringio/actions/runs/32414196865/job/96571873503)
+ 
 ## v0.4.3
 ### Updated
 - Update version inside pyproject and documentation
