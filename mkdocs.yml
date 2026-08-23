@@ -11,6 +11,7 @@ theme:
   name: material
   features:
     - navigation.sections
+    - navigation.tabs
     - toc.integrate
     - content.code.copy
   palette:
@@ -30,8 +31,8 @@ nav:
   - Home: index.md
   - User Guide: user-guide.md
   - Shortly about io_uring: io-uring.md
-  - Architecture: architecture.md
   - Development: development.md
+  - Architecture: architecture.md
   - Benchmark analysis: benchmarks-analysis.md
   - API Reference:
       - Overview: api.md
@@ -41,3 +42,4 @@ nav:
       - Context Managers: api/context-managers.md
       - Enums: api/enums.md
       - Module Functions: api/module-functions.md
+  - PyPI: https://pypi.org/project/uringio/

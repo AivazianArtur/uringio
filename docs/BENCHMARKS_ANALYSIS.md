@@ -15,8 +15,8 @@
 - **Cons**
     - **Kernel Cache Overhead:** SQE/CQE handling introduces overhead that makes it slower than standard synchronous reads/writes when data is already in the kernel's hot cache.
     - **Low-Scale Inefficiency:** Slower than standard methods for a small number of socket connections due to `io_uring` overhead.
-    - **Socket Closure Issues(v0.4.3):** Prone to `OSError 98` (Address already in use) under heavy loads; socket closing logic requires optimization.
-    - **Missing Read Optimizations(v0.4.3):** Cold cache reads and random read workloads currently lag behind standard methods and need optimizations like `O_DIRECT` support.
+    - **Socket Closure Issues(v0.4.4):** Prone to `OSError 98` (Address already in use) under heavy loads; socket closing logic requires optimization.
+    - **Missing Read Optimizations(v0.4.4):** Cold cache reads and random read workloads currently lag behind standard methods and need optimizations like `O_DIRECT` support.
 
 ## Benchmarks
 ### File

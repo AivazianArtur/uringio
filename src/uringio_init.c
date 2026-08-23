@@ -75,11 +75,6 @@ static PyMethodDef uringio_socket_methods[] = {
 };
 
 static PyMethodDef uringio_file_methods[] = {
-    // TODO: DOCS: Describe that short read/write handling is responsibility of
-    // client
-    // TODO: DOCS: Describe that because of async nature, we should explicitly
-    // send offsets
-
     {"read", (PyCFunction)UringioFile_read, METH_VARARGS | METH_KEYWORDS, "Read file"},
     {"readv", (PyCFunction)UringioFile_readv, METH_VARARGS | METH_KEYWORDS, "Read file, vectorized"},
     {"readv_raw",
@@ -158,7 +153,7 @@ static PyType_Slot UringioLoop_slots[] = {
 };
 
 static PyType_Spec UringioLoop_spec = {
-    .name = "uringio.src.python_api.loop.UringioLoop",
+    .name = "uringio.UringioLoop",
     .basicsize = sizeof(UringioLoop),
     .itemsize = 0,
     .flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC,

@@ -56,7 +56,7 @@ Let's look at this difference by looking at diagrams of two phases:
 
 ### Sending to Kernel 
 #### Epoll
-![Epoll diagramm](/docs/assets/uring/images/epoll_send_to_kernel.png)
+![Epoll diagramm](assets/uring/images/epoll_send_to_kernel.png)
 
 1. First, you`re creating socket and getting fd.
 2. By passing fd, socket is registered in epoll's interest list + in socket's `Wait Queue` is passing callback.
@@ -67,7 +67,7 @@ Let's look at this difference by looking at diagrams of two phases:
 7. When controller returns to kernel, it saves result to socket's `Receive Buffer`.
 
 #### Uring
-![Uring diagramm](/docs/assets/uring/images/uring_send_to_kernel.png)
+![Uring diagramm](assets/uring/images/uring_send_to_kernel.png)
 
 1. First, you`re creating socket and getting fd.
 2. Then user is making I/O operation. At this point, all user's information is in `User Buffer`.
@@ -82,7 +82,7 @@ Let's look at this difference by looking at diagrams of two phases:
 
 ### Getting Result 
 #### Epoll
-![Epoll diagramm](/docs/assets/uring/images/epoll_get_result.png)
+![Epoll diagramm](assets/uring/images/epoll_get_result.png)
 
 1. At this point, state of socket is changing and callback inside `Wait Queue` are calling.
 2. This callback makes two things:
@@ -94,7 +94,7 @@ Let's look at this difference by looking at diagrams of two phases:
 6. Kernel copies result to `User Buffer`.
 
 #### Uring
-![Uring diagramm](/docs/assets/uring/images/uring_get_result.png)
+![Uring diagramm](assets/uring/images/uring_get_result.png)
 
 0. After writing to `User Buffer`.
 1. Kernel creates CQE and sends it straight to `Completion Queue`.

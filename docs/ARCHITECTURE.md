@@ -45,7 +45,7 @@ Main challenge to bring `io_uring` in Python was to connect Python event loop an
    2. `Transfer Mode`. At now there is only one optimization, but we need to create category for it(also in next version there would one more category):
       1. `Zero Copy` - Zero copy is concept for ops to reduce CPU load. This is `io_uring` implementation of this concept.
    3. `Stream Strategy` - Same thing with motivation for existence of this category, and there is only one optimization:
-      1. `Multishot` - Allows one `Submission Queue Entry` to generate multiple `Completion Queue Event`s. It is poorly supported and debugged feature for now, so be careful. (v0.4.3)
+      1. `Multishot` - Allows one `Submission Queue Entry` to generate multiple `Completion Queue Event`s. It is poorly supported and debugged feature for now, so be careful. (v0.4.4)
 
 8. `Timer` - as we are waiting for kernel to complete the operation, we can set timeouts. That and performing separate async timer operation are purpose of this layer.
 

@@ -143,6 +143,7 @@ install-dev-tools:
 		llvm \
 		lldb \
 		gcc \
+		gawk \
 		g++ \
 		cppcheck \
 		clang-tools \
@@ -171,6 +172,7 @@ install-dev-tools:
 		llvm \
 		lldb \
 		gcc \
+		gawk \
 		gcc-c++ \
 		cppcheck \
 		clang-tools-extra \

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "uringio"
-version = "0.4.3"
+version = "0.4.4"
 requires-python = ">=3.12"
 authors = [
   {name = "Aivazian Artur", email = "arcanwork@gmail.com"},
