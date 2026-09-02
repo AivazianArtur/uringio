@@ -4,6 +4,7 @@ dist/
 .venv/
 .vscode/
 .idea/
+compile_commands.json
 .pytest_cache/
 .mypy_cache/
 wheelhouse/
